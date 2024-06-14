@@ -29,7 +29,6 @@ $(document).ready(function() {
         $('body').addClass(params.theme);
         $('.logo-datapact').addClass('d-none');
         $(`.logo-${params.theme}`).addClass('d-block');
-        console.log(params)
     }
 
     $('#slider-contratos').owlCarousel({
