@@ -348,10 +348,11 @@ header .opened .line3 {
   background: #869791;
 }
 
-body {
+:root {
   --site-color-primary: #F66135;
   --site-bg-header-effect:linear-gradient(to right, rgb(15, 32, 39), rgb(32, 58, 67), rgb(44, 83, 100));
 }
+
 body.parceiro-bradesco {
   --site-color-primary:#DF3253;
   --site-color-primary-hover:#c4213f;
