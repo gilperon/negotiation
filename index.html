@@ -9,6 +9,8 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/3.5.0/remixicon.css">
     <!-- Style custom -->
     <link rel="stylesheet" href="assets/css/base.css">
+    <script src="assets/js/utilities.js"></script>
+    <script src="assets/js/scripts.js"></script>
 </head>
 <body>
 
@@ -21,8 +23,12 @@
 
                     <div class="d-flex justify-content-center align-items-center" style="zoom:.95;">
                         <!--Logo-->
-                        <img src="https://raw.githubusercontent.com/gilperon/negotiation/main/assets/img/icon-logo.png" class="logo-icon">
-                        <span class="logo-company">DataPact</span>
+                        <div class="logo-datapact d-flex">
+                            <img src="https://raw.githubusercontent.com/gilperon/negotiation/main/assets/img/icon-logo.png" class="logo-icon">
+                            <span class="logo-company">DataPact</span>
+                        </div>
+                        <img class="logo-parceiro-bradesco" src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/8a/Banco_Bradesco_logo.svg/123px-Banco_Bradesco_logo.svg.png" style="height: 26px;margin:0 auto;display:none;">
+                        <img class="logo-parceiro-crefaz" src="https://artesanalinvestimentos.datapact.com.br/Login/ViewImage?id=89" style="height: 45px;margin:0 auto;display:none;">
                         <!--Icons-->
                         <ul class="nav d-none d-md-flex" style="margin-left:40px;margin-top:-8px;">
                             <li><a href="/" class="active"><i class="ri-home-6-line"></i>Início</a></li>
@@ -61,7 +67,7 @@
 
 
     <!--Header Effect-->
-    <section style="padding:30px 10px 110px;margin-bottom:-98px;background:linear-gradient(to right, rgb(15, 32, 39), rgb(32, 58, 67), rgb(44, 83, 100));">
+    <section style="padding:30px 10px 110px;margin-bottom:-98px;background:var(--site-bg-header-effect)">
         <div class="container">
             <div class="row">
                 <div class="col-12">

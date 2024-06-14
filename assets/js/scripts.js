@@ -1,5 +1,36 @@
+
+
+
+function getURLParams() {
+    var url = document.location.href;
+    var paramsString = url.split('?')[1];
+    var data = {};
+
+    if (paramsString) {
+        var params = paramsString.split('&');
+        var tmp;
+
+        for (var i = 0, l = params.length; i < l; i++) {
+            tmp = params[i].split('=');
+            data[tmp[0]] = decodeURIComponent(tmp[1]);  // Decode the parameter value
+        }
+    } else {
+        console.warn('No query parameters found in the URL');
+    }
+
+    return data;
+}
+
+
 $(document).ready(function() {
 
+    let params = getURLParams();
+    if(params.theme && params.theme!=='undefined'){
+        $('body').addClass(params.theme);
+        $('.logo-datapact').addClass('d-none');
+        $(`.logo-${params.theme}`).addClass('d-block');
+        console.log(params)
+    }
 
     $('#slider-contratos').owlCarousel({
         stagePadding: 15,
@@ -42,15 +73,5 @@ $(document).ready(function() {
         brandSliderClasses()
     });
     $('.first-active .card-radio-label').click();
-    //Clica em um vai para a primeira posição
-    // $(document).on('click', '.owl-item', function() {
-    //     let carousel = $(this).closest('.owl-carousel');
-    //     let index = $(this).index();
-    //     let relativeIndex = carousel.data('owl.carousel').relative(index);
-    //     carousel.trigger('to.owl.carousel', [relativeIndex, 300]);
-    // });
-
-    
-
 
 });

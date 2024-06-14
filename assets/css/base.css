@@ -348,8 +348,27 @@ header .opened .line3 {
   background: #869791;
 }
 
-:root {
+body {
   --site-color-primary: #F66135;
+  --site-bg-header-effect:linear-gradient(to right, rgb(15, 32, 39), rgb(32, 58, 67), rgb(44, 83, 100));
+}
+body.parceiro-bradesco {
+  --site-color-primary:#DF3253;
+  --site-color-primary-hover:#c4213f;
+  --site-bg-gradient-livre:rgb(130 0 119 / 50%);
+  --site-bg-header-effect:linear-gradient(to bottom, #DF3253, #c4213f);
+}
+body.parceiro-bradesco .section-cover-livre {
+  display: none !important;
+}
+body.parceiro-crefaz {
+  --site-color-primary:#446299 ;
+  --site-color-primary-hover:#2A487E;
+  --site-bg-gradient-livre:rgb(0 76 130 / 50%);
+  --site-bg-header-effect:linear-gradient(to bottom, #446299, #2A487E);
+}
+body.parceiro-crefaz .section-cover-livre {
+  display: none !important;
 }
 
 body {
@@ -422,7 +441,7 @@ a {
   align-items: start;
   background: #fff;
   border: 1px solid #e0e2e5;
-  border-left: 15px solid #F66135;
+  border-left: 15px solid var(--site-color-primary);
   padding: 20px;
   border-radius: 15px;
   margin-top: 15px;
@@ -432,7 +451,7 @@ a {
   .wrap-main .card-debts {
     margin-top: 10px;
     background: #f2f2f2;
-    border-left: 10px solid #F66135;
+    border-left: 10px solid var(--site-color-primary);
   }
 }
 .wrap-main .card-debts .ff-bank {
