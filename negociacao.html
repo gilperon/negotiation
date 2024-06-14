@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inicio - Dashboard</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/3.5.0/remixicon.css">
+    <!-- Style custom -->
+    <link rel="stylesheet" href="assets/css/base.css">
+    <script src="assets/js/utilities.js"></script>
+    <script src="assets/js/scripts.js"></script>
+</head>
+<body>
+
+
+    <!--Desktop Menu-->
+    <header>
+        <div class="container">
+            <div class="row">
+                <div class="col-12 d-flex justify-content-between align-items-center">
+
+                    <div class="d-flex justify-content-center align-items-center" style="zoom:.95;">
+                        <!--Logo-->
+                        <img src="/assets/img/icon-logo.png" class="logo-icon">
+                        <span class="logo-company">DataPact</span>
+                        <!--Icons-->
+                        <ul class="nav d-none d-md-flex" style="margin-left:40px;margin-top:-8px;">
+                            <li><a href="/inicio" class="active"><i class="ri-home-6-line"></i>Início</a></li>
+                            <li><a href="/perfil"><i class="ri-user-line"></i>Perfil</a></li>
+                            <li><a href="/ajuda"><i class="ri-questionnaire-line"></i>Ajuda</a></li>
+                            <li><a href="/logout"><i class="ri-logout-circle-r-line"></i>Sair</a></li>
+                        </ul>
+                    </div>
+
+                    <!--Avatar-->
+                    <div class="d-none d-md-flex justify-content-center align-items-center" style="zoom:.95;">
+                        <div style="font-family:'Inter';text-align: end;">
+                            <span style="font-size:14px;display:block;margin-bottom:-4px;color:#888;">Bem-vindo,</span>
+                            <span style="font-size:15px;display:block;font-weight:500;margin-bottom:-2px;color:#1A1C29;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;max-width: 100px;">
+                                Paulo Cesar
+                            </span>
+                        </div>
+                        <div class="ms-2">
+                            <img src="assets/img/avatar-default-user.svg" style="width: 32px;height: 32px;">
+                        </div>
+                    </div>
+
+                    <!--Toggler-->
+                    <button class="menu-mobile-icon d-flex d-md-none" onclick="this.classList.toggle('opened');this.setAttribute('aria-expanded', this.classList.contains('opened'))">
+                        <svg width="38" height="38" viewBox="0 0 100 100">
+                        <path class="line line1" d="M 20,29.000046 H 80.000231 C 80.000231,29.000046 94.498839,28.817352 94.532987,66.711331 94.543142,77.980673 90.966081,81.670246 85.259173,81.668997 79.552261,81.667751 75.000211,74.999942 75.000211,74.999942 L 25.000021,25.000058" />
+                        <path class="line line2" d="M 20,50 H 80" />
+                        <path class="line line3" d="M 20,70.999954 H 80.000231 C 80.000231,70.999954 94.498839,71.182648 94.532987,33.288669 94.543142,22.019327 90.966081,18.329754 85.259173,18.331003 79.552261,18.332249 75.000211,25.000058 75.000211,25.000058 L 25.000021,74.999942" />
+                        </svg>
+                    </button>
+
+                </div>
+            </div>
+        </div>
+    </header>
+
+
+    <!--Header Effect-->
+    <section style="padding:30px 10px 110px;margin-bottom:-98px;background:linear-gradient(to right, rgb(15, 32, 39), rgb(32, 58, 67), rgb(44, 83, 100));">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <h4 style="margin-top:5px;color:#fff;">Negociação</h4>
+                    <h6 class="mb-0" style="color:#fff;opacity: .5;font-weight: 300;">Quite sua dívida hoje com até 50% de desconto. </h6>                    
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <section class="wrap-negotiation mb-4">
+        <div class="container px-0 px-md-2">
+            <div class="row">
+                <div class="col-12">
+
+                    <div class="box-negotiation">
+
+
+                                <ol class="activity-checkout mb-0 px-3 px-md-4">
+                                    <li class="checkout-item">
+                                        <div class="box-circle checkout-icon p-1">
+                                            <div class="box-circle-icon rounded-circle bg-primary"> <span class="material-symbols-outlined"> sell </span></div>
+                                        </div>
+                                        <div class="feed-item-list">
+                                            <div>
+                                                <h2 class="h5 mb-1" style="font-size: 1.05rem;">Proposta</h2>
+                                                <h2 class="h6 mb-4" style="font-size: 14px;font-weight: 400;border-bottom: 1px solid #eee;padding-bottom: 15px;color: #6c757d!important;line-height: 20px;">Escolha uma opção que cabe no seu bolso</h2>
+            
+                                                <div class="mb-3">
+                                                    <div class="row">
+                                                        <div class="col-12">
+                                                            
+
+                                                            <div class="wrap-slider">
+                    
+                                                                <!--Carousel-->
+                                                                <div id="slider-contratos" class="owl-carousel owl-theme">
+                                                                    
+                                                                    <div class="item">
+                                                                        <label class="card-radio-label mb-0">
+                                                                            <input type="radio" name="proposta" id="proposta" class="card-radio-input" value="discount-1">
+                                                                            <div class="card-radio card-min text-truncate p-3 position-relative">
+                                                                                        <p class="ff-condition mb-4">Á vista</p>
+                                                                                        <p class="small mb-2" style="color:#13926a;">Desconto de <b>40%</b></p>
+                                                                                        <p class="small mb-2">De <s style="font-weight: 600;">R$250,00</s> por <b style="font-weight: 600;">R$180,00</b></p>
+                                                                                        <p class="small mb-4">Pagamento á vista 🔥</p>
+                                                                                        <p class="small mb-2">Total : <b style=" font-size: 1.2rem; line-height: 1.2; font-family: 'Poppins'; color: #111; font-weight: 600; ">R$180,00</b></p>
+                                                                                </div>
+                                                                        </label>
+                                                                    </div>
+                                                                    <div class="item">
+                                                                        <label class="card-radio-label mb-0">
+                                                                            <input type="radio" name="proposta" id="proposta" class="card-radio-input" value="discount-2">
+                                                                            <div class="card-radio card-min text-truncate p-3 position-relative">
+                                                                                        <p class="ff-condition mb-4">Parcelado</p>
+                                                                                        <p class="small mb-2" style="color:#13926a;">Desconto de <b>25%</b></p>
+                                                                                        <p class="small mb-2">Entrada: <b class="me-2">R$260,00</b></p>
+                                                                                        <p class="small mb-4">Parcela: <b class="me-2">1x de R$260,27</b></p>
+                                                                                        <p class="small mb-2">Total : <b style=" font-size: 1.2rem; line-height: 1.2; font-family: 'Poppins'; color: #111; font-weight: 600; ">R$520,00</b></p>
+                                                                                </div>
+                                                                        </label>
+                                                                    </div>
+                                                                    <div class="item">
+                                                                        <label class="card-radio-label mb-0">
+                                                                            <input type="radio" name="proposta" id="proposta" class="card-radio-input" value="discount-3">
+                                                                            <div class="card-radio card-min text-truncate p-3 position-relative">
+                                                                                        <p class="ff-condition mb-4">Parcelado</p>
+                                                                                        <p class="small mb-2" style="color:#13926a;">Desconto de <b>20%</b></p>
+                                                                                        <p class="small mb-2">Entrada: <b class="me-2">R$360,00</b></p>
+                                                                                        <p class="small mb-4">Parcela: <b class="me-2">2x de R$360,27</b></p>
+                                                                                        <p class="small mb-2">Total : <b style=" font-size: 1.2rem; line-height: 1.2; font-family: 'Poppins'; color: #111; font-weight: 600; ">R$620,00</b></p>
+                                                                                </div>
+                                                                        </label>
+                                                                    </div>
+                                                                    <div class="item">
+                                                                        <label class="card-radio-label mb-0">
+                                                                            <input type="radio" name="proposta" id="proposta" class="card-radio-input" value="discount-4">
+                                                                            <div class="card-radio card-min text-truncate p-3 position-relative">
+                                                                                        <p class="ff-condition mb-4">Parcelado</p>
+                                                                                        <p class="small mb-2" style="color:#13926a;">Desconto de <b>15%</b></p>
+                                                                                        <p class="small mb-2">Entrada: <b class="me-2">R$460,00</b></p>
+                                                                                        <p class="small mb-4">Parcela: <b class="me-2">3x de R$460,27</b></p>
+                                                                                        <p class="small mb-2">Total : <b style=" font-size: 1.2rem; line-height: 1.2; font-family: 'Poppins'; color: #111; font-weight: 600; ">R$820,00</b></p>
+                                                                                </div>
+                                                                        </label>
+                                                                    </div>
+                                                                </div>
+
+                                                                <!--Carousel Controls-->
+                                                                <div class="d-none d-md-block text-md-end p-2" style="margin-bottom:-50px;">
+                                                                    <svg onclick="$('#slider-contratos').trigger('prev.owl.carousel');" style="cursor: pointer;fill:#444;transform:scaleX(-1);" class="FJ6RFd" viewBox="0 0 24 24" focusable="false" height="34" width="34"><path d="M0 0h24v24H0z" fill="none"></path><path d="M8.59,16.59L13.17,12L8.59,7.41L10,6l6,6l-6,6L8.59,16.59z"></path></svg>
+                                                                    <svg onclick="$('#slider-contratos').trigger('next.owl.carousel');" style="cursor: pointer;fill:#444;margin-left:-10px;" class="t0PEec" viewBox="0 0 24 24" focusable="false" height="34" width="34"><path d="M0 0h24v24H0z" fill="none"></path><path d="M8.59,16.59L13.17,12L8.59,7.41L10,6l6,6l-6,6L8.59,16.59z"></path></svg>
+                                                                </div>
+
+
+
+                                                            </div>
+
+
+
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li class="checkout-item">
+                                        <div class="box-circle checkout-icon p-1">
+                                            <div class="box-circle-icon rounded-circle bg-primary"> <span class="material-symbols-outlined">check_small </span></div>
+                                        </div>
+            
+                                        <div class="feed-item-list">
+                                            <div style="padding-top: 10px;">
+                                                <h2 class="h5 mb-1" style="font-size: 1.05rem;">Pagamento</h2>
+                                                <h2 class="h6 mb-4" style="font-size: 14px;font-weight: 400;border-bottom: 1px solid #eee;padding-bottom: 15px;color: #6c757d!important;line-height: 20px;">Qual a data do vencimento?</h2>
+                                            </div>
+                                            <div>
+                                                <div class="row">
+                                                    
+                                                    <div class="col-lg-3 col-sm-6">
+                                                        <button class="btn btn-success mb-4" dtp-toggle="" style="display: block;background: #f2f2f2;box-shadow: inset 0 -5px 0 0 rgba(0, 0, 0, 0.05);cursor: default !important;color: #000;padding: 12px 20px 16px;border-radius:10px;border:2px solid #ddd;font-family: 'Open Sans';font-size: 15px;font-weight: 500;color: #333;">13/06/2024 <span class="material-symbols-outlined" style="font-size:20px;vertical-align: -3px;opacity: .7;margin-left: 2px;">calendar_month</span></button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+            
+                                    </li>
+                                    <li class="checkout-item">
+                                        <div class="box-circle checkout-icon p-1">
+                                            <div class="box-circle-icon rounded-circle bg-primary"> <span class="material-symbols-outlined">attach_money </span></div>
+                                        </div>
+            
+                                        <div class="feed-item-list">
+                                            <div style="padding-top: 10px;">
+                                                <h2 class="h6 mb-4" style="font-size: 1.05rem;/* font-weight: 400; */border-bottom: 1px solid #eee;padding-bottom: 15px;/* color: #6c757d!important; */line-height: 20px;">Forma de pagamento</h2>
+                                            </div>
+                                            <div>
+                                                <div class="row">
+                                                    
+                                                    <div class="col-lg-3 col-sm-6">
+                                                        <div>
+                                                            <label class="card-radio-label">
+                                                                <input type="radio" name="pay-method" id="pay-methodoption3" class="card-radio-input" checked=""><span class="card-radio py-3 text-center text-truncate"> <span class="material-symbols-outlined" style="
+                display: block;
+                font-size: 32px;
+            "> barcode</span><span>Boleto bancário</span> </span>
+                                                            </label>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-lg-3 col-sm-6">
+                                                        <div>
+                                                            <label class="card-radio-label">
+                                                                <input type="radio" name="pay-method" id="pay-methodoption2" class="card-radio-input"> <span class="card-radio py-3 text-center text-truncate"> <div style="
+                background-image: url(data:image/svg+xml;charset=utf-8;base64,PHN2ZyB3aWR0aD0nMzInIGhlaWdodD0nMzInIGZpbGw9J25vbmUnIHhtbG5zPSdodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2Zyc+PHBhdGggZD0nTTIyLjcxNyAyMi4zNmEzLjUwNCAzLjUwNCAwIDAgMS0yLjQ5My0xLjAzMmwtMy42LTMuNmEuNjg0LjY4NCAwIDAgMC0uOTQ2IDBsLTMuNjEzIDMuNjEzYTMuNTA0IDMuNTA0IDAgMCAxLTIuNDkzIDEuMDMyaC0uNzFsNC41NiA0LjU2YTMuNjQ2IDMuNjQ2IDAgMCAwIDUuMTU2IDBsNC41NzItNC41NzNoLS40MzNaTTkuNTcyIDkuNjI3Yy45NDIgMCAxLjgyNy4zNjcgMi40OTMgMS4wMzJsMy42MTMgMy42MTRhLjY3LjY3IDAgMCAwIC45NDYgMGwzLjYtMy42YTMuNTA0IDMuNTA0IDAgMCAxIDIuNDkzLTEuMDMzaC40MzNsLTQuNTcyLTQuNTcyYTMuNjQ2IDMuNjQ2IDAgMCAwLTUuMTU2IDBsLTQuNTYgNC41NTloLjcxWicgZmlsbD0nIzMyQkNBRCcvPjxwYXRoIGQ9J20yNi45MzIgMTMuNDIyLTIuNzYzLTIuNzYzYS41MjYuNTI2IDAgMCAxLS4xOTYuMDRoLTEuMjU2Yy0uNjUgMC0xLjI4NS4yNjMtMS43NDQuNzIybC0zLjYgMy42Yy0uMzM3LjMzNy0uNzguNTA1LTEuMjIyLjUwNWExLjcyIDEuNzIgMCAwIDEtMS4yMjEtLjUwNWwtMy42MTQtMy42MTNhMi40ODMgMi40ODMgMCAwIDAtMS43NDQtLjcyM0g4LjAyN2EuNTI0LjUyNCAwIDAgMS0uMTg1LS4wMzdsLTIuNzc0IDIuNzc0YTMuNjQ2IDMuNjQ2IDAgMCAwIDAgNS4xNTZsMi43NzQgMi43NzRhLjUyNS41MjUgMCAwIDEgLjE4NS0uMDM3aDEuNTQ1Yy42NSAwIDEuMjg1LS4yNjQgMS43NDQtLjcyM2wzLjYxMy0zLjYxM2MuNjUzLS42NTIgMS43OTItLjY1MyAyLjQ0NCAwbDMuNiAzLjZjLjQ1OS40NiAxLjA5NC43MjMgMS43NDQuNzIzaDEuMjU2YS41My41MyAwIDAgMSAuMTk2LjAzOWwyLjc2My0yLjc2M2EzLjY0NiAzLjY0NiAwIDAgMCAwLTUuMTU2WicgZmlsbD0nIzMyQkNBRCcvPjwvc3ZnPg==);
+                background-repeat: no-repeat;
+                background-size: 32px;
+                width: 32px;
+                height: 32px;
+                margin: 0 auto;"></div> PIX </span> </label>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-lg-3 col-sm-6">
+                                                        <div data-bs-toggle="collapse">
+                                                            <label class="card-radio-label">
+                                                                <input type="radio" name="pay-method" id="pay-methodoption1" class="card-radio-input"> <span class="card-radio py-3 text-center text-truncate"> <div style="
+                background-image: url(data:image/svg+xml;charset=utf-8;base64,PHN2ZyB3aWR0aD0nMjYnIGhlaWdodD0nMjAnIGZpbGw9J25vbmUnIHhtbG5zPSdodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2Zyc+PHBhdGggZD0nTTI0LjMwNC4yNUgxLjY5NkMuNzU5LjI1IDAgMS4wMSAwIDEuOTQ2djE1LjgyNmMwIC45MzYuNzYgMS42OTUgMS42OTYgMS42OTVoMjIuNjA4Yy45MzcgMCAxLjY5Ni0uNzU5IDEuNjk2LTEuNjk1VjEuOTQ2QzI2IDEuMDA5IDI1LjI0LjI1IDI0LjMwNC4yNVonIGZpbGw9JyM1MEE3RkQnLz48cGF0aCBkPSdNMjYgNC4zMTNIMHY0LjA2MmgyNlY0LjMxMlonIGZpbGw9JyMzMzMnLz48cGF0aCBkPSdNMTYuMjUgMTEuNjI1aC0xM3YyLjQzOGgxM3YtMi40MzhaJyBmaWxsPScjRjJGMkYyJy8+PC9zdmc+);
+                background-repeat: no-repeat;
+                background-size: 32px;
+                width: 32px;
+                height: 32px;
+                margin: 0 auto;"></div> Cartão de crédito </span> </label>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+            
+                                    </li>
+                                    <li class="checkout-item">
+                                        <div class="box-circle checkout-icon p-1">
+                                            <div class="box-circle-icon rounded-circle bg-primary"> <span class="material-symbols-outlined"><span class="material-symbols-outlined">in_home_mode</span> </span>
+                                            </div>
+                                        </div>
+                                        <div class="feed-item-list">
+                                            <div>
+                                                <div style="padding-top: 10px;">
+                                                <h2 class="h6 mb-4" style="font-size: 1.05rem;/* font-weight: 400; */border-bottom: 1px solid #eee;padding-bottom: 15px;/* color: #6c757d!important; */line-height: 20px;">Endereço</h2>
+                                            </div>
+                                                <div class="mb-3" style="    background: #f6f6f6;padding: 25px 25px 35px;border-radius: 10px;border:1px solid #eee;">
+                                                    <form>
+                                                        <div>
+                                                            <div class="mb-3">
+                                                                <label class="form-label" for="billing-address">Endereço</label>
+                                                                <input type="text" class="form-control" id="billing-city" placeholder="Digite o endereço completo">
+                                                            </div>
+                                                            <div class="row">
+                                                                <div class="col-lg-4">
+                                                                    <div class="mb-4 mb-lg-0">
+                                                                        <label class="form-label">Cidade</label>
+                                                                        <input type="text" class="form-control" id="billing-city" placeholder="Digite a cidade">
+                                                                    </div>
+                                                                </div>
+                                                                <div class="col-lg-4">
+                                                                    <div class="mb-4 mb-lg-0">
+                                                                        <label class="form-label" for="billing-city">Estado</label>
+                                                                        <input type="text" class="form-control" id="billing-city" placeholder="Digite o estado">
+                                                                    </div>
+                                                                </div>
+                                                                <div class="col-lg-4">
+                                                                    <div class="mb-0">
+                                                                        <label class="form-label" for="zip-code">CEP</label>
+                                                                        <input type="text" class="form-control" id="zip-code" placeholder="00000-000">
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </form>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </li>
+                                </ol>
+
+                                <div class="text-start ms-5 ps-3" style="margin-top:-10px;">
+                                    <button class="btn btn-lg" style="background: #2C2F41;color:#fff;border-radius:5px;zoom: .85;box-shadow:inset 0px -1px 1px 0px rgba(255, 255, 255, 0.2);">Continuar</button>
+                                </div>
+
+
+
+                            </div>
+
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-12">
+                    <div class="box-negotiation mb-2" style="padding:30px;">
+                        <div class="font-title mb-2">Não encontrou a proposta ideal?</div>
+                        <div class="font-subtitle mb-2" style="line-height: 1.5rem;">Faça uma <span class="ff-details mt-1 mt-md-0">simulação agora</span> e quem sabe podemos entrar em um acordo! </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+</body>
+</html>
