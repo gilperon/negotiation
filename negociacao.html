@@ -7,6 +7,8 @@
     <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/3.5.0/remixicon.css">
+    <!--Toastr-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
     <!-- Style custom -->
     <link rel="stylesheet" href="assets/css/base.css">
     <script src="assets/js/utilities.js"></script>
@@ -32,15 +34,15 @@
                         <!--Icons-->
                         <ul class="nav d-none d-md-flex" style="margin-left:40px;margin-top:-8px;">
                             <li><a href="/" class="active"><i class="ri-home-6-line"></i>Início</a></li>
-                            <li><a href="/perfil"><i class="ri-user-line"></i>Perfil</a></li>
-                            <li><a href="/ajuda"><i class="ri-questionnaire-line"></i>Ajuda</a></li>
-                            <li><a href="/logout"><i class="ri-logout-circle-r-line"></i>Sair</a></li>
+                            <li><a href="/perfil" class="link-disabled"><i class="ri-user-line"></i>Perfil</a></li>
+                            <li><a href="/ajuda" class="link-disabled"><i class="ri-questionnaire-line"></i>Ajuda</a></li>
+                            <li><a href="/logout" class="link-disabled"><i class="ri-logout-circle-r-line"></i>Sair</a></li>
                         </ul>
                     </div>
 
                     <!--Avatar-->
                     <div class="d-none d-md-flex justify-content-center align-items-center" style="zoom:.95;">
-                        <div style="font-family:'Inter';text-align: end;">
+                        <div style="font-family:'Inter';text-align: end;user-select: none;">
                             <span style="font-size:14px;display:block;margin-bottom:-4px;color:#888;">Bem-vindo,</span>
                             <span style="font-size:15px;display:block;font-weight:500;margin-bottom:-2px;color:#1A1C29;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;max-width: 100px;">
                                 Paulo Cesar
@@ -95,7 +97,7 @@
                                         <div class="feed-item-list">
                                             <div>
                                                 <h2 class="h5 mb-1" style="font-size: 1.05rem;">Proposta</h2>
-                                                <h2 class="h6 mb-4" style="font-size: 14px;font-weight: 400;border-bottom: 1px solid #eee;padding-bottom: 15px;color: #6c757d!important;line-height: 20px;">Escolha uma opção que cabe no seu bolso</h2>
+                                                <h2 class="h6 mb-3 mb-md-4" style="font-size: 14px;font-weight: 400;border-bottom: 1px solid #eee;padding-bottom: 15px;color: #6c757d!important;line-height: 20px;">Escolha uma opção que cabe no seu bolso</h2>
             
                                                 <div class="mb-3">
                                                     <div class="row">
@@ -158,7 +160,7 @@
                                                                 </div>
 
                                                                 <!--Carousel Controls-->
-                                                                <div class="d-none d-md-block text-md-end p-2" style="margin-bottom:-50px;">
+                                                                <div class="d-blocks text-end pt-2 pb-2 pt-md-3" style="margin-bottom:-50px;margin-right:-10px;user-select: none;">
                                                                     <svg onclick="$('#slider-contratos').trigger('prev.owl.carousel');" style="cursor: pointer;fill:#444;transform:scaleX(-1);" class="FJ6RFd" viewBox="0 0 24 24" focusable="false" height="34" width="34"><path d="M0 0h24v24H0z" fill="none"></path><path d="M8.59,16.59L13.17,12L8.59,7.41L10,6l6,6l-6,6L8.59,16.59z"></path></svg>
                                                                     <svg onclick="$('#slider-contratos').trigger('next.owl.carousel');" style="cursor: pointer;fill:#444;margin-left:-10px;" class="t0PEec" viewBox="0 0 24 24" focusable="false" height="34" width="34"><path d="M0 0h24v24H0z" fill="none"></path><path d="M8.59,16.59L13.17,12L8.59,7.41L10,6l6,6l-6,6L8.59,16.59z"></path></svg>
                                                                 </div>
@@ -185,13 +187,8 @@
                                                 <h2 class="h5 mb-1" style="font-size: 1.05rem;">Pagamento</h2>
                                                 <h2 class="h6 mb-4" style="font-size: 14px;font-weight: 400;border-bottom: 1px solid #eee;padding-bottom: 15px;color: #6c757d!important;line-height: 20px;">Qual a data do vencimento?</h2>
                                             </div>
-                                            <div>
-                                                <div class="row">
-                                                    
-                                                    <div class="col-lg-3 col-sm-6">
-                                                        <button class="btn btn-success mb-4" dtp-toggle="" style="display: block;background: #f2f2f2;box-shadow: inset 0 -5px 0 0 rgba(0, 0, 0, 0.05);cursor: default !important;color: #000;padding: 12px 20px 16px;border-radius:10px;border:2px solid #ddd;font-family: 'Open Sans';font-size: 15px;font-weight: 500;color: #333;">13/06/2024 <span class="material-symbols-outlined" style="font-size:20px;vertical-align: -3px;opacity: .7;margin-left: 2px;">calendar_month</span></button>
-                                                    </div>
-                                                </div>
+                                            <div class="mb-3">
+                                                <button class="btn btn-success btn-calendar link-disabled">13/06/2024 <span class="material-symbols-outlined" style="font-size:20px;vertical-align: -3px;opacity: .7;margin-left: 2px;">calendar_month</span></button>
                                             </div>
                                         </div>
             
@@ -203,43 +200,34 @@
             
                                         <div class="feed-item-list">
                                             <div style="padding-top: 10px;">
-                                                <h2 class="h6 mb-4" style="font-size: 1.05rem;/* font-weight: 400; */border-bottom: 1px solid #eee;padding-bottom: 15px;/* color: #6c757d!important; */line-height: 20px;">Forma de pagamento</h2>
+                                                <h2 class="h6 mb-3 mb-md-4" style="font-size: 1.05rem;border-bottom: 1px solid #eee;padding-bottom: 15px;/* color: #6c757d!important; */line-height: 20px;">Forma de pagamento</h2>
                                             </div>
                                             <div>
                                                 <div class="row">
                                                     
-                                                    <div class="col-lg-3 col-sm-6">
+                                                    <div class="col-4 col-lg-3 col-sm-6 mb-3">
                                                         <div>
                                                             <label class="card-radio-label">
-                                                                <input type="radio" name="pay-method" id="pay-methodoption3" class="card-radio-input" checked=""><span class="card-radio py-3 text-center text-truncate"> <span class="material-symbols-outlined" style="
-                display: block;
-                font-size: 32px;
-            "> barcode</span><span>Boleto bancário</span> </span>
+                                                                <input type="radio" name="pay-method" id="pay-methodoption3" class="card-radio-input" checked="">
+                                                                <span class="card-radio card-radio-payment py-3 text-center text-truncate"><i class="payment-icon icon-boleto"></i> Boleto <span class="d-none d-md-inline-block">bancário</span></span>
                                                             </label>
                                                         </div>
                                                     </div>
-                                                    <div class="col-lg-3 col-sm-6">
+                                                    <div class="col-4 col-lg-3 col-sm-6 mb-3">
                                                         <div>
                                                             <label class="card-radio-label">
-                                                                <input type="radio" name="pay-method" id="pay-methodoption2" class="card-radio-input"> <span class="card-radio py-3 text-center text-truncate"> <div style="
-                background-image: url(data:image/svg+xml;charset=utf-8;base64,PHN2ZyB3aWR0aD0nMzInIGhlaWdodD0nMzInIGZpbGw9J25vbmUnIHhtbG5zPSdodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2Zyc+PHBhdGggZD0nTTIyLjcxNyAyMi4zNmEzLjUwNCAzLjUwNCAwIDAgMS0yLjQ5My0xLjAzMmwtMy42LTMuNmEuNjg0LjY4NCAwIDAgMC0uOTQ2IDBsLTMuNjEzIDMuNjEzYTMuNTA0IDMuNTA0IDAgMCAxLTIuNDkzIDEuMDMyaC0uNzFsNC41NiA0LjU2YTMuNjQ2IDMuNjQ2IDAgMCAwIDUuMTU2IDBsNC41NzItNC41NzNoLS40MzNaTTkuNTcyIDkuNjI3Yy45NDIgMCAxLjgyNy4zNjcgMi40OTMgMS4wMzJsMy42MTMgMy42MTRhLjY3LjY3IDAgMCAwIC45NDYgMGwzLjYtMy42YTMuNTA0IDMuNTA0IDAgMCAxIDIuNDkzLTEuMDMzaC40MzNsLTQuNTcyLTQuNTcyYTMuNjQ2IDMuNjQ2IDAgMCAwLTUuMTU2IDBsLTQuNTYgNC41NTloLjcxWicgZmlsbD0nIzMyQkNBRCcvPjxwYXRoIGQ9J20yNi45MzIgMTMuNDIyLTIuNzYzLTIuNzYzYS41MjYuNTI2IDAgMCAxLS4xOTYuMDRoLTEuMjU2Yy0uNjUgMC0xLjI4NS4yNjMtMS43NDQuNzIybC0zLjYgMy42Yy0uMzM3LjMzNy0uNzguNTA1LTEuMjIyLjUwNWExLjcyIDEuNzIgMCAwIDEtMS4yMjEtLjUwNWwtMy42MTQtMy42MTNhMi40ODMgMi40ODMgMCAwIDAtMS43NDQtLjcyM0g4LjAyN2EuNTI0LjUyNCAwIDAgMS0uMTg1LS4wMzdsLTIuNzc0IDIuNzc0YTMuNjQ2IDMuNjQ2IDAgMCAwIDAgNS4xNTZsMi43NzQgMi43NzRhLjUyNS41MjUgMCAwIDEgLjE4NS0uMDM3aDEuNTQ1Yy42NSAwIDEuMjg1LS4yNjQgMS43NDQtLjcyM2wzLjYxMy0zLjYxM2MuNjUzLS42NTIgMS43OTItLjY1MyAyLjQ0NCAwbDMuNiAzLjZjLjQ1OS40NiAxLjA5NC43MjMgMS43NDQuNzIzaDEuMjU2YS41My41MyAwIDAgMSAuMTk2LjAzOWwyLjc2My0yLjc2M2EzLjY0NiAzLjY0NiAwIDAgMCAwLTUuMTU2WicgZmlsbD0nIzMyQkNBRCcvPjwvc3ZnPg==);
-                background-repeat: no-repeat;
-                background-size: 32px;
-                width: 32px;
-                height: 32px;
-                margin: 0 auto;"></div> PIX </span> </label>
+                                                                <input type="radio" name="pay-method" id="pay-methodoption2" class="card-radio-input">
+                                                                        <span class="card-radio card-radio-payment py-3 text-center text-truncate"><i class="payment-icon icon-pix"></i> PIX </span>
+                                                                </label>
                                                         </div>
                                                     </div>
-                                                    <div class="col-lg-3 col-sm-6">
+                                                    <div class="col-4 col-lg-3 col-sm-6 mb-3">
                                                         <div data-bs-toggle="collapse">
                                                             <label class="card-radio-label">
-                                                                <input type="radio" name="pay-method" id="pay-methodoption1" class="card-radio-input"> <span class="card-radio py-3 text-center text-truncate"> <div style="
-                background-image: url(data:image/svg+xml;charset=utf-8;base64,PHN2ZyB3aWR0aD0nMjYnIGhlaWdodD0nMjAnIGZpbGw9J25vbmUnIHhtbG5zPSdodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2Zyc+PHBhdGggZD0nTTI0LjMwNC4yNUgxLjY5NkMuNzU5LjI1IDAgMS4wMSAwIDEuOTQ2djE1LjgyNmMwIC45MzYuNzYgMS42OTUgMS42OTYgMS42OTVoMjIuNjA4Yy45MzcgMCAxLjY5Ni0uNzU5IDEuNjk2LTEuNjk1VjEuOTQ2QzI2IDEuMDA5IDI1LjI0LjI1IDI0LjMwNC4yNVonIGZpbGw9JyM1MEE3RkQnLz48cGF0aCBkPSdNMjYgNC4zMTNIMHY0LjA2MmgyNlY0LjMxMlonIGZpbGw9JyMzMzMnLz48cGF0aCBkPSdNMTYuMjUgMTEuNjI1aC0xM3YyLjQzOGgxM3YtMi40MzhaJyBmaWxsPScjRjJGMkYyJy8+PC9zdmc+);
-                background-repeat: no-repeat;
-                background-size: 32px;
-                width: 32px;
-                height: 32px;
-                margin: 0 auto;"></div> Cartão de crédito </span> </label>
+                                                                <input type="radio" name="pay-method" id="pay-methodoption1" class="card-radio-input">
+                                                                <span class="card-radio card-radio-payment py-3 text-center text-truncate">
+                                                                    <i class="payment-icon icon-card"></i> Cartão <span class="d-none d-md-inline-block">de Crédito</span></span>
+                                                                </label>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -255,7 +243,7 @@
                                         <div class="feed-item-list">
                                             <div>
                                                 <div style="padding-top: 10px;">
-                                                <h2 class="h6 mb-4" style="font-size: 1.05rem;/* font-weight: 400; */border-bottom: 1px solid #eee;padding-bottom: 15px;/* color: #6c757d!important; */line-height: 20px;">Endereço</h2>
+                                                <h2 class="h6 mb-3 mb-md-4" style="font-size: 1.05rem;/* font-weight: 400; */border-bottom: 1px solid #eee;padding-bottom: 15px;/* color: #6c757d!important; */line-height: 20px;">Endereço</h2>
                                             </div>
                                                 <div class="mb-3" style="    background: #f6f6f6;padding: 25px 25px 35px;border-radius: 10px;border:1px solid #eee;">
                                                     <form>
@@ -292,9 +280,8 @@
                                     </li>
                                 </ol>
 
-                                <div class="text-start ms-5 ps-3" style="margin-top:-10px;">
-                                    <button class="btn btn-lg" style="background: #2C2F41;color:#fff;border-radius:5px;zoom: .85;box-shadow:inset 0px -1px 1px 0px rgba(255, 255, 255, 0.2);box-shadow:0 3px 0 0 #040405, 0 4px 4px -1px rgba(0, 0, 0, 0.6);">Continuar</button>
-                                    <!-- <button class="btn btn-lg" data-bs-toggle="modal" data-bs-target="#nomadCalculadora" style="background: #2C2F41;color:#fff;border-radius:5px;zoom: .85;box-shadow: 0 3px 0 0 #4a4b56, 0 4px 4px -1px rgba(0, 0, 0, 0.6);background-color: #6D6F7F;background-image: linear-gradient(-45deg, #6D6F7F, #61708b);">Continuar</button> -->
+                                <div class="text-center text-md-start ms-md-5 ps-md-3" style="margin-top:-10px;">
+                                    <button class="btn btn-lg btn-negotiate">Continuar</button>
                                 </div>
 
 
@@ -307,7 +294,7 @@
                 <div class="col-12">
                     <div class="box-negotiation mb-2" style="padding:30px;">
                         <div class="font-title mb-2">Não encontrou a proposta ideal?</div>
-                        <div class="font-subtitle mb-2" style="line-height: 1.5rem;">Faça uma <span class="ff-details mt-1 mt-md-0">simulação agora</span> e quem sabe podemos entrar em um acordo! </div>
+                        <div class="font-subtitle mb-2" style="line-height: 1.5rem;">Faça uma <span class="ff-details mt-1 mt-md-0">simulação agora</span> e quem sabe podemos entrar em um acordo.</div>
                     </div>
                 </div>
             </div>

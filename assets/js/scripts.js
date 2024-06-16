@@ -52,6 +52,11 @@ $(document).ready(function() {
     // seta o theme
     setThemeFromURL();
 
+    $('.link-disabled').on('click', function(event) {
+        event.preventDefault(); 
+        toastr["info"]("Ação desativada na versão demo.");
+    });
+
     $('#slider-contratos').owlCarousel({
         stagePadding: 15,
         loop:false,
