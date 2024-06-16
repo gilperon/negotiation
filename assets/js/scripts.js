@@ -1,6 +1,6 @@
 
 
-
+// Pega os atributos da URL
 function getURLParams() {
     var url = document.location.href;
     var paramsString = url.split('?')[1];
@@ -22,14 +22,35 @@ function getURLParams() {
 }
 
 
+// Salve o theme
+function setThemeFromURL() {
+    var params = getURLParams();
+    if (params.theme) {
+        localStorage.setItem('theme', params.theme);
+    }
+
+    applyTheme();
+}
+
+// Seta o theme
+function applyTheme() {
+    var theme = localStorage.getItem('theme');
+    if (theme) {
+        document.body.className = theme;
+        if(theme.includes('bradesco') || theme.includes('crefaz')){
+            $('.logo-datapact').addClass('d-none');
+            $(`.logo-${theme}`).addClass('d-block');
+        }
+    }
+}
+
+
+
+
 $(document).ready(function() {
 
-    let params = getURLParams();
-    if(params.theme && params.theme!=='undefined'){
-        $('body').addClass(params.theme);
-        $('.logo-datapact').addClass('d-none');
-        $(`.logo-${params.theme}`).addClass('d-block');
-    }
+    // seta o theme
+    setThemeFromURL();
 
     $('#slider-contratos').owlCarousel({
         stagePadding: 15,

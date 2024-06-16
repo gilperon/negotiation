@@ -293,7 +293,8 @@
                                 </ol>
 
                                 <div class="text-start ms-5 ps-3" style="margin-top:-10px;">
-                                    <button class="btn btn-lg" style="background: #2C2F41;color:#fff;border-radius:5px;zoom: .85;box-shadow:inset 0px -1px 1px 0px rgba(255, 255, 255, 0.2);">Continuar</button>
+                                    <button class="btn btn-lg" style="background: #2C2F41;color:#fff;border-radius:5px;zoom: .85;box-shadow:inset 0px -1px 1px 0px rgba(255, 255, 255, 0.2);box-shadow:0 3px 0 0 #040405, 0 4px 4px -1px rgba(0, 0, 0, 0.6);">Continuar</button>
+                                    <!-- <button class="btn btn-lg" data-bs-toggle="modal" data-bs-target="#nomadCalculadora" style="background: #2C2F41;color:#fff;border-radius:5px;zoom: .85;box-shadow: 0 3px 0 0 #4a4b56, 0 4px 4px -1px rgba(0, 0, 0, 0.6);background-color: #6D6F7F;background-image: linear-gradient(-45deg, #6D6F7F, #61708b);">Continuar</button> -->
                                 </div>
 
 
@@ -312,6 +313,152 @@
             </div>
         </div>
     </section>
+
+
+      <style>
+        .pop-up-calculator {
+            grid-column-gap: 0rem;
+            grid-row-gap: 0rem;
+            flex-direction: column;
+            justify-content: center;
+            align-items: flex-start;
+            display: flex;
+            position: static;
+        }
+        .calculator-content {
+            margin-top: 0;
+            padding: 0 2rem 2rem;
+            -webkit-text-size-adjust: 100%;
+            -ms-text-size-adjust: 100%;
+            font-family: sans-serif;
+        }
+        .calculator-title {
+            margin-bottom: 10px;
+            font-weight: 700;
+            margin-top: 20px;
+            font-size: 24px;
+            line-height: 30px;
+            margin-bottom: 1.2rem;
+            color:#344351;
+        }
+        .calculator-line {
+            position: relative;
+        }
+        .calculator-line-container {
+            border-left: 1px dashed #cbcdc8;
+        }
+        .icon-table-modal {
+            background-color: #e8ebe8;
+            border-radius: 20px;
+            width: 0.6rem;
+            height: 0.6rem;
+            position: absolute;
+            left: -0.25rem;
+            top: 0;
+        }
+        .calculator-texts {
+            margin-left: 2rem;
+            padding-bottom: 0.6rem;
+        }
+        .text-size-small {
+            color: #5f645f;
+            text-align: left;
+            letter-spacing: 0.2px;
+            border: 1px solid transparent;
+            margin-top: 0;
+            margin-bottom: 0;
+            font-size: 14px;
+            font-weight: 400;
+            line-height: 130%;
+            &:first-child{
+                font-size:15px;
+            }
+        }
+        .plus-icon-modal {
+            position: absolute;
+            top: 0;
+            left: -0.5rem;
+            background-color: #e8ebe8;
+            border-radius: 20px;
+            justify-content: center;
+            align-items: center;
+            width: 1.2rem;
+            height: 1.2rem;
+            margin-top: 0;
+            padding: 1px;
+            display: flex;
+        }
+        .text-size-small.weight-bold.color-black, .text-size-small.color-black {
+            color: #1a1a13;
+        }
+
+        .weight-bold {
+            font-weight: 700;
+        }
+        .rounded-4 {
+            border-radius: 20px;
+        }
+      </style>
+
+    <div class="modal" tabindex="-1" id="nomadCalculadora" style="display: none;" aria-hidden="true">
+        <div class="modal-dialog modal-md modal-dialog-top">
+          <div class="modal-content rounded-4 p-2">
+            <div class="position-absolute p-3 pe-4 end-0 modal-close">
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <div class="calculator-content">
+                <div class="pop-up-calculator">
+                  <h3 class="calculator-title">Confirmação da Proposta </h3>
+                  <div class="calculator-line">
+                    <div class="calculator-line-container">
+                      <div class="icon-table-modal"></div>
+                      <div class="calculator-texts">
+                        <div class="text-size-small weight-bold color-black">Pagamento á vista</div>
+                        <div class="text-size-small">Total de <b>R$470,00</b></div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="calculator-line">
+                    <div class="calculator-line-container">
+                      <div class="plus-icon-modal">
+                        <div class="text-size-regular color-secondary">+</div>
+                      </div>
+                      <div class="calculator-texts">
+                        <div class="text-size-small weight-bold color-black">Data de vencimento</div>
+                        <div class="text-size-small">Efetuar o pagamento até dia 03/04/2024</a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="calculator-line">
+                    <div class="calculator-line-container">
+                      <div class="plus-icon-modal">
+                        <div class="text-size-regular color-secondary">+</div>
+                      </div>
+                      <div class="calculator-texts">
+                        <div class="text-size-small weight-bold color-black">Forma de pagamento</div>
+                        <div class="text-size-small">Boleto Bancário</div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="calculator-line">
+                    <div>
+                      <div class="plus-icon-modal">
+                        <div class="text-size-regular color-secondary">=</div>
+                      </div>
+                      <div class="calculator-texts">
+                        <div class="text-size-small weight-bold color-black">Endereço</div>
+                        <div class="text-size-small">Rua frei caneca, 360</div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
 
 
 </body>
