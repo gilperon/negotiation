@@ -903,13 +903,13 @@ a {
   margin: 0 auto;
 }
 .wrap-negotiation .payment-icon.icon-pix {
-  background-image: url(/assets/img/icon-pix.svg);
+  background-image: url(../img/icon-pix.svg);
 }
 .wrap-negotiation .payment-icon.icon-card {
-  background-image: url(/assets/img/icon-card.svg);
+  background-image: url(../img/icon-card.svg);
 }
 .wrap-negotiation .payment-icon.icon-boleto {
-  background-image: url(/assets/img/icon-boleto.svg);
+  background-image: url(../img/icon-boleto.svg);
 }
 .wrap-negotiation .btn-calendar {
   display: block;
