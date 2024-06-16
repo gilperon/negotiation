@@ -653,6 +653,10 @@ a {
   box-shadow: inset 0 -5px 0 0 rgba(0, 0, 0, 0.05);
 }
 
+.toast {
+  background-color: #000 !important;
+}
+
 .wrap-main .font-title {
   font: 500 1.1rem "Inter", Arial, Helvetica, sans-serif;
 }
