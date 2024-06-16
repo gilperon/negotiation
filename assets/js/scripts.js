@@ -60,6 +60,8 @@ $(document).ready(function() {
     $('.ff-details').on('click', function(event) {
         var myModal = new bootstrap.Modal(document.getElementById('modal-detalhes'));
         myModal.show();
+        var myModal = new bootstrap.Modal(document.getElementById('modal-no-user'));
+        myModal.show();
     });
 
     $('#slider-contratos').owlCarousel({
