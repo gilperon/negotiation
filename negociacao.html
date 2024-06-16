@@ -281,7 +281,7 @@
                                 </ol>
 
                                 <div class="text-center text-md-start ms-md-5 ps-md-3" style="margin-top:-10px;">
-                                    <button class="btn btn-lg btn-negotiate link-disabled">Continuar</button>
+                                    <button class="btn btn-lg btn-negotiate" data-bs-toggle="modal" data-bs-target="#modal-resumo">Continuar</button>
                                 </div>
 
                             </div>
@@ -298,6 +298,95 @@
             </div>
         </div>
     </section>
+
+
+    <!--Modal Detalhes-->
+    <div class="modal fade p-0" id="modal-resumo" tabindex="-1" aria-labelledby="modal-resumo" style="display: none;" aria-hidden="true">
+        <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+            <div class="modal-body px-2 py-3 p-md-4">
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close" style="position: absolute;right:20px;top:20px;z-index:9999;"></button>
+                
+                <!--detalhes-->
+                <div class="card">
+                    <div class="card-body p-3">
+                        <h2 class="h5 mb-1" style="
+                font-size: 1.1rem;
+                ">Negociação</h2>
+                        <h2 class="h6 mb-4" style="font-size: 14px;font-weight: 400;border-bottom: 1px solid #eee;padding-bottom: 15px;color: #6c757d!important;">Detalhes da proposta</h2>
+                        <ul class="list-group list-group-flush px-2" style="
+                    margin-top: -20px;margin-left:-5px;
+                ">
+                            <li class="list-group-item d-flex align-items-center justify-content-between px-0 border-bottom  pt-3" style="
+                            padding-bottom: 20px;
+                            border-bottom: 0px solid transparent !important;
+                        ">
+                                        <div>
+                                            <h3 class="h6 mb-1">Pagamento</h3><h2 class="h6 mb-0" style="font-size: 14px;font-weight: 400;/* border-bottom: 1px solid #eee; */padding-bottom: 15px;color: #6c757d!important;">Data do vencimento</h2>
+                        
+                                        </div>
+                                        <div>
+                                            <div class="form-check form-switch mb-0">
+                                                <span class="small" style="font-weight: 500;">05/12/2024</span>
+                        
+                                            </div>
+                                        </div>
+                                    </li>
+                            <li class="list-group-item d-flex align-items-center justify-content-between px-0 border-bottom  pt-3" style="
+                    background: #f6f6f6;
+                    margin: 0 -2.2rem;
+                    padding: 1rem 2rem;
+                    padding-right: 20px;
+                    border: 0;
+                    border-bottom: 0px solid transparent !important;
+                ">
+                                <div>
+                                    <h3 class="h6 mb-1" style="
+                    padding-left: 30px;
+                ">Proposta</h3>
+                
+                                </div>
+                                <div>
+                                    <div class="form-check form-switch" style="
+                    padding-right: 30px;
+                ">
+                                        <i class="bi bi-credit-card-2-front-fill" style="color:#000;font-size:29px;line-height: 10px;cursor:pointer;"></i>
+                                        <label class="form-check-label" for="user-notification-1"></label>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="list-group-item d-flex flex-column align-items-start pt-3 px-0 border-bottom">
+                                <div>
+                
+                
+                                </div>
+                
+                
+                                <div style="display:flex;justify-content: space-between;margin-bottom:10px;width:100%;">
+                                    <span class="small">Dívida</span>
+                                    <span class="small">R$100.00</span>
+                                </div>
+                                <div style="display:flex;justify-content: space-between;margin-bottom:10px;width:100%;">
+                                    <span class="small">Desconto</span>
+                                    <span class="small text-success">🔥 R$30.00</span>
+                                </div>
+                                <div style="display:flex;justify-content: space-between;margin-bottom:10px;width:100%;">
+                                    <span class="small">Total</span>
+                                    <span class="small"> <b style="font-size: 1rem;line-height: 1.2;font-family: 'Poppins';color: #111;font-weight: 600;">R$180,00</b></span>
+                                </div>
+                            </li>
+                        </ul>
+                        <a href="#" class="btn btn-primary mt-3 mx-2 link-disabled" style="float: right;background:#2C2F41;border-color:#2C2F41;box-shadow:0 3px 0 0 #040405, 0 4px 4px -1px rgba(0, 0, 0, 0.6);font-size: 15px;padding:5px 25px">Confirmar</a>
+                    </div>
+                </div>
+
+
+
+            </div>
+        </div>
+        </div>
+    </div>
 
 
 </body>
