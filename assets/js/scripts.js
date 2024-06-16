@@ -57,6 +57,11 @@ $(document).ready(function() {
         toastr["info"]("Ação desativada na versão demo.");
     });
 
+    $('.ff-details').on('click', function(event) {
+        var myModal = new bootstrap.Modal(document.getElementById('modal-detalhes'));
+        myModal.show();
+    });
+
     $('#slider-contratos').owlCarousel({
         stagePadding: 15,
         loop:false,

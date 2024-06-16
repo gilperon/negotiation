@@ -66,6 +66,16 @@ a{
     text-decoration: none;
 }
 
+// Ajuste para o modal do bootstrap não adicionar padding-right ao body
+.modal-open{
+    padding:0 !important;
+    .modal{
+        .btn-close:focus,.btn-close:hover {
+            outline:none !important;
+            box-shadow: inset 0 -5px 0 0 rgba(0, 0, 0, 0.05);
+        }
+    }
+}
 
 
 .wrap-main{
@@ -474,6 +484,30 @@ a{
     }
 
 
+}
+
+
+.wrap-table-detalhes{
+
+        table{
+                th{
+                min-width: 150px;
+                font: 600 14px 'Open Sans';
+                color:#626262;
+                border-bottom:0;
+                background-color: #f2f2f2;
+                &:first-child{
+                    padding-left:30px;
+                }
+            }
+            tr td{
+                font: 400 13px 'Open Sans';
+                color:#000;
+                &:first-child{
+                    padding-left:30px;
+                }
+            }
+    }
 }
 
 
