@@ -34,7 +34,8 @@ body{
         --site-color-primary:#DF3253;
         --site-color-primary-hover:#c4213f;
         --site-bg-gradient-livre:rgb(130 0 119 / 50%);
-        --site-bg-header-effect:linear-gradient(to bottom, #DF3253, #c4213f);
+        //--site-bg-header-effect:linear-gradient(to bottom, #DF3253, #c4213f);
+        --site-bg-header-effect:linear-gradient(to bottom, rgba(0, 0, 0, 0.1) 100%, transparent 100%),#DF3253;
         .section-cover-livre{
             display:none !important;
         }
@@ -44,7 +45,8 @@ body{
         --site-color-primary:#446299 ;
         --site-color-primary-hover:#2A487E;
         --site-bg-gradient-livre:rgb(0 76 130 / 50%);
-        --site-bg-header-effect:linear-gradient(to bottom, #446299, #2A487E);
+        //--site-bg-header-effect:linear-gradient(to bottom, #446299, #2A487E);
+        --site-bg-header-effect:linear-gradient(to bottom, rgba(0, 0, 0, 0.3) 100%, transparent 100%),#446299;
         .section-cover-livre{
             display:none !important;
         }
