@@ -169,9 +169,10 @@ a{
             text-shadow: 1px 1px 1px #222;
             border-radius: 20px;
             color: #dcdde8;
+            transition: background-color 0.5s ease-in-out;
             &:hover{
-                background: #14151d;
-                color:#eee;
+                background-color: #000;
+                color:#fff;
             }
         }
 
@@ -383,9 +384,9 @@ a{
     }
     
     .card-radio-label {
-        display: block
+        display: block;
+        position:relative;
     }
-
     
     .card-radio-input {
         display: none

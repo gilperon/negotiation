@@ -750,10 +750,11 @@ a {
   text-shadow: 1px 1px 1px #222;
   border-radius: 20px;
   color: #dcdde8;
+  transition: background-color 0.5s ease-in-out;
 }
 .wrap-main .card-debts .btn-deal:hover {
-  background: #14151d;
-  color: #eee;
+  background-color: #000;
+  color: #fff;
 }
 .wrap-main .btn-view-all {
   border: 1px dashed rgba(107, 114, 128, 0.5);
@@ -964,6 +965,7 @@ a {
 }
 .wrap-negotiation .card-radio-label {
   display: block;
+  position: relative;
 }
 .wrap-negotiation .card-radio-input {
   display: none;
