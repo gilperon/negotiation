@@ -1,244 +1,397 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Inicio - Dashboard</title>
     <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/3.5.0/remixicon.css">
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/3.5.0/remixicon.css"
+    />
     <!--Toastr-->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
     <!-- Style custom -->
-    <link rel="stylesheet" href="assets/css/base.css">
+    <link rel="stylesheet" href="assets/css/base.css" />
     <script src="assets/js/utilities.js"></script>
     <script src="assets/js/scripts.js"></script>
-</head>
-<body>
-
-
+  </head>
+  <body>
     <!--Desktop Menu-->
     <header>
-        <div class="container">
-            <div class="row">
-                <div class="col-12 d-flex justify-content-between align-items-center">
-
-                    <div class="d-flex justify-content-center align-items-center" style="zoom:.95;">
-                        <!--Logo-->
-                        <div class="logo-datapact d-flex">
-                            <img src="https://raw.githubusercontent.com/gilperon/negotiation/main/assets/img/icon-logo.png" class="logo-icon">
-                            <span class="logo-company">DataPact</span>
-                        </div>
-                        <img class="logo-parceiro-bradesco" src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/8a/Banco_Bradesco_logo.svg/123px-Banco_Bradesco_logo.svg.png" style="height: 26px;margin:0 auto;display:none;">
-                        <img class="logo-parceiro-crefaz" src="https://artesanalinvestimentos.datapact.com.br/Login/ViewImage?id=89" style="height: 45px;margin:0 auto;display:none;">
-                        <!--Icons-->
-                        <ul class="nav d-none d-md-flex" style="margin-left:40px;margin-top:-8px;">
-                            <li><a href="/" class="active"><i class="ri-home-6-line"></i>Início</a></li>
-                            <li><a href="/perfil" class="link-disabled"><i class="ri-user-line"></i>Perfil</a></li>
-                            <li><a href="/ajuda" class="link-disabled"><i class="ri-questionnaire-line"></i>Ajuda</a></li>
-                            <li><a href="/logout" class="link-disabled"><i class="ri-logout-circle-r-line"></i>Sair</a></li>
-                        </ul>
-                    </div>
-
-                    <!--Avatar-->
-                    <div class="d-none d-md-flex justify-content-center align-items-center" style="zoom:.95;">
-                        <div style="font-family:'Inter';text-align: end;user-select: none;">
-                            <span style="font-size:14px;display:block;margin-bottom:-4px;color:#888;">Bem-vindo,</span>
-                            <span style="font-size:15px;display:block;font-weight:500;margin-bottom:-2px;color:#1A1C29;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;max-width: 100px;">
-                                Paulo Cesar
-                            </span>
-                        </div>
-                        <div class="ms-2">
-                            <img src="assets/img/avatar-default-user.svg" style="width: 32px;height: 32px;">
-                        </div>
-                    </div>
-
-                    <!--Toggler-->
-                    <button class="menu-mobile-icon d-flex d-md-none" onclick="this.classList.toggle('opened');this.setAttribute('aria-expanded', this.classList.contains('opened'))">
-                        <svg width="38" height="38" viewBox="0 0 100 100">
-                        <path class="line line1" d="M 20,29.000046 H 80.000231 C 80.000231,29.000046 94.498839,28.817352 94.532987,66.711331 94.543142,77.980673 90.966081,81.670246 85.259173,81.668997 79.552261,81.667751 75.000211,74.999942 75.000211,74.999942 L 25.000021,25.000058" />
-                        <path class="line line2" d="M 20,50 H 80" />
-                        <path class="line line3" d="M 20,70.999954 H 80.000231 C 80.000231,70.999954 94.498839,71.182648 94.532987,33.288669 94.543142,22.019327 90.966081,18.329754 85.259173,18.331003 79.552261,18.332249 75.000211,25.000058 75.000211,25.000058 L 25.000021,74.999942" />
-                        </svg>
-                    </button>
-
-                </div>
+      <div class="container">
+        <div class="row">
+          <div class="col-12 d-flex justify-content-between align-items-center">
+            <div
+              class="d-flex justify-content-center align-items-center"
+              style="zoom: 0.95"
+            >
+              <!--Logo-->
+              <div class="logo-datapact d-flex">
+                <img
+                  src="https://raw.githubusercontent.com/gilperon/negotiation/main/assets/img/icon-logo.png"
+                  class="logo-icon"
+                />
+                <span class="logo-company">DataPact</span>
+              </div>
+              <img
+                class="logo-parceiro-bradesco"
+                src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/8a/Banco_Bradesco_logo.svg/123px-Banco_Bradesco_logo.svg.png"
+                style="height: 26px; margin: 0 auto; display: none"
+              />
+              <img
+                class="logo-parceiro-crefaz"
+                src="https://artesanalinvestimentos.datapact.com.br/Login/ViewImage?id=89"
+                style="height: 45px; margin: 0 auto; display: none"
+              />
+              <!--Icons-->
+              <ul
+                class="nav d-none d-md-flex"
+                style="margin-left: 40px; margin-top: -8px"
+              >
+                <li>
+                  <a href="./index.html" class="active"
+                    ><i class="ri-home-6-line"></i>Início</a
+                  >
+                </li>
+                <li>
+                  <a href="/perfil" class="link-disabled"
+                    ><i class="ri-user-line"></i>Perfil</a
+                  >
+                </li>
+                <li>
+                  <a href="/ajuda" class="link-disabled"
+                    ><i class="ri-questionnaire-line"></i>Ajuda</a
+                  >
+                </li>
+                <li>
+                  <a href="/logout" class="link-disabled"
+                    ><i class="ri-logout-circle-r-line"></i>Sair</a
+                  >
+                </li>
+              </ul>
             </div>
+
+            <!--Avatar-->
+            <div
+              class="d-none d-md-flex justify-content-center align-items-center"
+              style="zoom: 0.95"
+            >
+              <div
+                style="font-family: 'Inter'; text-align: end; user-select: none"
+              >
+                <span
+                  style="
+                    font-size: 14px;
+                    display: block;
+                    margin-bottom: -4px;
+                    color: #888;
+                  "
+                  >Bem-vindo,</span
+                >
+                <span
+                  style="
+                    font-size: 15px;
+                    display: block;
+                    font-weight: 500;
+                    margin-bottom: -2px;
+                    color: #1a1c29;
+                    white-space: nowrap;
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+                    max-width: 100px;
+                  "
+                >
+                  Paulo Cesar
+                </span>
+              </div>
+              <div class="ms-2">
+                <img
+                  src="assets/img/avatar-default-user.svg"
+                  style="width: 32px; height: 32px"
+                />
+              </div>
+            </div>
+
+            <!--Toggler-->
+            <button
+              class="menu-mobile-icon d-flex d-md-none"
+              onclick="this.classList.toggle('opened');this.setAttribute('aria-expanded', this.classList.contains('opened'))"
+            >
+              <svg width="38" height="38" viewBox="0 0 100 100">
+                <path
+                  class="line line1"
+                  d="M 20,29.000046 H 80.000231 C 80.000231,29.000046 94.498839,28.817352 94.532987,66.711331 94.543142,77.980673 90.966081,81.670246 85.259173,81.668997 79.552261,81.667751 75.000211,74.999942 75.000211,74.999942 L 25.000021,25.000058"
+                />
+                <path class="line line2" d="M 20,50 H 80" />
+                <path
+                  class="line line3"
+                  d="M 20,70.999954 H 80.000231 C 80.000231,70.999954 94.498839,71.182648 94.532987,33.288669 94.543142,22.019327 90.966081,18.329754 85.259173,18.331003 79.552261,18.332249 75.000211,25.000058 75.000211,25.000058 L 25.000021,74.999942"
+                />
+              </svg>
+            </button>
+          </div>
         </div>
+      </div>
     </header>
 
-
     <!--Header Effect-->
-    <section style="padding:30px 10px 110px;margin-bottom:-98px;background:var(--site-bg-header-effect)">
-        <div class="container">
-            <div class="row">
-                <div class="col-12">
-                    <h4 style="margin-top:5px;color:#fff;">Olá Paulo!</h4>
-                    <h6 class="mb-0" style="color:#fff;opacity: .5;font-weight: 300;">Ofertas imperdíveis para negociar suas dívidas.</h6>                    
-                </div>
-            </div>
+    <section
+      style="
+        padding: 30px 10px 110px;
+        margin-bottom: -98px;
+        background: var(--site-bg-header-effect);
+      "
+    >
+      <div class="container">
+        <div class="row">
+          <div class="col-12">
+            <h4 style="margin-top: 5px; color: #fff">Olá Paulo!</h4>
+            <h6
+              class="mb-0"
+              style="color: #fff; opacity: 0.5; font-weight: 300"
+            >
+              Ofertas imperdíveis para negociar suas dívidas.
+            </h6>
+          </div>
         </div>
+      </div>
     </section>
 
     <!--Main-->
     <main class="wrap-main">
-        <div class="container px-0 px-md-2">
-            <div class="row">
-                <div class="col-12">
-
-                        <div class="grid-container mt-4">
-                            <div class="grid-item">
-
-                                <div class="font-title mb-2">Minhas pendências</div>
-                                <div class="font-subtitle mb-4">Confira as dívidas que você pode negociar.</div>
-                                <div class="card-debts">
-                                    <div>
-                                        <p class="ff-bank mb-1">Artesanal Boleto FID</p>
-                                        <p class="small mb-0">Contrato: 398239</p>
-                                        <p class="small mb-0">Data do contrato: 10/04/2020</p>
-                                        <p class="small mb-3">Valor: <b class="me-2">R$200,00</b> <span class="ff-details mt-1 mt-md-0 d-block d-md-inline-block">ver detalhes</span></p>
-                                    </div>
-                                    <div class="text-end">
-                                        <p class="small mb-0">De <s>R$200</s> por</p>
-                                        <p class="ff-value mb-2">R$180</p>
-                                        <a href="./negociacao.html" class="btn btn-deal">Negociar 🔥</a>
-                                    </div>
-                                </div>
-                                <div class="card-debts">
-                                    <div>
-                                        <p class="ff-bank mb-1">Artesanal Investimento</p>
-                                        <p class="small mb-0">Contrato: 128231</p>
-                                        <p class="small mb-0">Data do contrato: 05/03/2018</p>
-                                        <p class="small mb-3">Valor: <b class="me-2">R$1.200,00</b> <span class="ff-details mt-1 mt-md-0 d-block d-md-inline-block">ver detalhes</span></p>
-                                    </div>
-                                    <div class="text-end">
-                                        <p class="small mb-0">De <s>R$1200</s> por</p>
-                                        <p class="ff-value mb-2">R$974</p>
-                                        <a href="./negociacao.html" class="btn btn-deal">Negociar 🔥</a>
-                                    </div>
-                                </div>
-                                <div class="card-debts">
-                                    <div>
-                                        <p class="ff-bank mb-1">Consiga Fundo de Investimento</p>
-                                        <p class="small mb-0">Contrato: 12312</p>
-                                        <p class="small mb-0">Data do contrato: 02/07/2021</p>
-                                        <p class="small mb-1">Valor: <b class="me-2">R$10,00</b> <span class="ff-details mt-1 mt-md-0 d-block d-md-inline-block">ver detalhes</span></p>
-                                        <p class="small mb-3" style="color:#13926a;">Desconto de <b>40%</b></p>
-                                    </div>
-                                    <div class="text-end">
-                                        <p class="small mb-0">De <s>R$10</s> por</p>
-                                        <p class="ff-value mb-2">R$8</p>
-                                        <a href="./negociacao.html" class="btn btn-deal">Negociar 🔥</a>
-                                    </div>
-                                </div>
-                                <button type="button" class="btn btn-view-all"> Visualizar todas as propostas</button>
-                            </div>
-                            <div class="grid-item">
-                                <div class="font-title mb-2">Quite suas dívidas</div>
-                                <div class="font-subtitle mb-4">Aproveite as condições que cabem no seu bolso.</div>
-                                <img src="assets/img/referrals.svg" style="max-width:360px;height:310px;" class="mb-3">
-                                <div class="font-title mb-2">Ficou alguma dúvida?</div>
-                                <div class="font-subtitle mb-4">Entre em contato com nossa central de atendimento.</div>
-                                <div class="card-helpdesk">
-                                    <p class="mb-1">Central de Atendimento</p>
-                                    <p class="theme-cs mb-1"><i class="ri-customer-service-line" style="font-size: 20px;margin-right:4px;"></i> 0800-052-5051</p>
-                                </div>
-                            </div>
-                        </div>
-
+      <div class="container px-0 px-md-2">
+        <div class="row">
+          <div class="col-12">
+            <div class="grid-container mt-4">
+              <div class="grid-item">
+                <div class="font-title mb-2">Minhas pendências</div>
+                <div class="font-subtitle mb-4">
+                  Confira as dívidas que você pode negociar.
                 </div>
+                <div class="card-debts">
+                  <div>
+                    <p class="ff-bank mb-1">Artesanal Boleto FID</p>
+                    <p class="small mb-0">Contrato: 398239</p>
+                    <p class="small mb-0">Data do contrato: 10/04/2020</p>
+                    <p class="small mb-3">
+                      Valor: <b class="me-2">R$200,00</b>
+                      <span
+                        class="ff-details mt-1 mt-md-0 d-block d-md-inline-block"
+                        >ver detalhes</span
+                      >
+                    </p>
+                  </div>
+                  <div class="text-end">
+                    <p class="small mb-0">De <s>R$200</s> por</p>
+                    <p class="ff-value mb-2">R$180</p>
+                    <a href="./negociacao.html" class="btn btn-deal"
+                      >Negociar 🔥</a
+                    >
+                  </div>
+                </div>
+                <div class="card-debts">
+                  <div>
+                    <p class="ff-bank mb-1">Artesanal Investimento</p>
+                    <p class="small mb-0">Contrato: 128231</p>
+                    <p class="small mb-0">Data do contrato: 05/03/2018</p>
+                    <p class="small mb-3">
+                      Valor: <b class="me-2">R$1.200,00</b>
+                      <span
+                        class="ff-details mt-1 mt-md-0 d-block d-md-inline-block"
+                        >ver detalhes</span
+                      >
+                    </p>
+                  </div>
+                  <div class="text-end">
+                    <p class="small mb-0">De <s>R$1200</s> por</p>
+                    <p class="ff-value mb-2">R$974</p>
+                    <a href="./negociacao.html" class="btn btn-deal"
+                      >Negociar 🔥</a
+                    >
+                  </div>
+                </div>
+                <div class="card-debts">
+                  <div>
+                    <p class="ff-bank mb-1">Consiga Fundo de Investimento</p>
+                    <p class="small mb-0">Contrato: 12312</p>
+                    <p class="small mb-0">Data do contrato: 02/07/2021</p>
+                    <p class="small mb-1">
+                      Valor: <b class="me-2">R$10,00</b>
+                      <span
+                        class="ff-details mt-1 mt-md-0 d-block d-md-inline-block"
+                        >ver detalhes</span
+                      >
+                    </p>
+                    <p class="small mb-3" style="color: #13926a">
+                      Desconto de <b>40%</b>
+                    </p>
+                  </div>
+                  <div class="text-end">
+                    <p class="small mb-0">De <s>R$10</s> por</p>
+                    <p class="ff-value mb-2">R$8</p>
+                    <a href="./negociacao.html" class="btn btn-deal"
+                      >Negociar 🔥</a
+                    >
+                  </div>
+                </div>
+                <button type="button" class="btn btn-view-all">
+                  Visualizar todas as propostas
+                </button>
+              </div>
+              <div class="grid-item">
+                <div class="font-title mb-2">Quite suas dívidas</div>
+                <div class="font-subtitle mb-4">
+                  Aproveite as condições que cabem no seu bolso.
+                </div>
+                <img
+                  src="assets/img/referrals.svg"
+                  style="max-width: 360px; height: 310px"
+                  class="mb-3"
+                />
+                <div class="font-title mb-2">Ficou alguma dúvida?</div>
+                <div class="font-subtitle mb-4">
+                  Entre em contato com nossa central de atendimento.
+                </div>
+                <div class="card-helpdesk">
+                  <p class="mb-1">Central de Atendimento</p>
+                  <p class="theme-cs mb-1">
+                    <i
+                      class="ri-customer-service-line"
+                      style="font-size: 20px; margin-right: 4px"
+                    ></i>
+                    0800-052-5051
+                  </p>
+                </div>
+              </div>
             </div>
+          </div>
         </div>
+      </div>
     </main>
 
-
-
     <!--Modal Detalhes-->
-    <div class="modal fade p-0" id="modal-detalhes" tabindex="-1" aria-labelledby="modal-detalhes" style="display: none;" aria-hidden="true">
-        <div class="modal-dialog" style="max-width: fit-content;">
+    <div
+      class="modal fade p-0"
+      id="modal-detalhes"
+      tabindex="-1"
+      aria-labelledby="modal-detalhes"
+      style="display: none"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog" style="max-width: fit-content">
         <div class="modal-content">
-            <div class="modal-header">
-            <h5 class="modal-title" style="font:500 15px/20px Inter;">Contrato n.º 298234</h5>
-            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close" style="zoom:.9;"></button>
+          <div class="modal-header">
+            <h5 class="modal-title" style="font: 500 15px/20px Inter">
+              Contrato n.º 298234
+            </h5>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+              style="zoom: 0.9"
+            ></button>
+          </div>
+          <div class="modal-body p-4">
+            <div class="wrap-table-detalhes">
+              <div class="table-responsive">
+                <table class="table text-nowrap">
+                  <thead>
+                    <tr>
+                      <th class="border-top-0">Parcela</th>
+                      <th class="border-top-0">Tipo</th>
+                      <th class="border-top-0">Vencimento</th>
+                      <th class="border-top-0">Original</th>
+                      <th class="border-top-0">Atualizado</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>006</td>
+                      <td>Parcela</td>
+                      <td>13/10/2022</td>
+                      <td>R$ 946,60</td>
+                      <td>R$ 146,60</td>
+                    </tr>
+                    <tr>
+                      <td>007</td>
+                      <td>Parcela</td>
+                      <td>05/03/2021</td>
+                      <td>R$ 193,10</td>
+                      <td>R$ 121,10</td>
+                    </tr>
+                    <tr>
+                      <td>008</td>
+                      <td>Parcela</td>
+                      <td>13/10/2022</td>
+                      <td>R$ 946,60</td>
+                      <td>R$ 146,60</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
             </div>
-            <div class="modal-body p-4">
-                <div class="wrap-table-detalhes">
-                    <div class="table-responsive">
-                      <table class="table text-nowrap">
-                        <thead>
-                          <tr>
-                            <th class="border-top-0">Parcela</th>
-                            <th class="border-top-0">Tipo</th>
-                            <th class="border-top-0">Vencimento</th>
-                            <th class="border-top-0">Original</th>
-                            <th class="border-top-0">Atualizado</th>
-                          </tr>
-                        </thead>
-                        <tbody>
-                          <tr>
-                            <td>006</td>
-                            <td>Parcela</td>
-                            <td>13/10/2022</td>
-                            <td>R$ 946,60</td>
-                            <td>R$ 146,60</td>
-                          </tr>
-                          <tr>
-                            <td>007</td>
-                            <td>Parcela</td>
-                            <td>05/03/2021</td>
-                            <td>R$ 193,10</td>
-                            <td>R$ 121,10</td>
-                          </tr>
-                          <tr>
-                            <td>008</td>
-                            <td>Parcela</td>
-                            <td>13/10/2022</td>
-                            <td>R$ 946,60</td>
-                            <td>R$ 146,60</td>
-                          </tr>
-                        </tbody>
-                      </table>
-                    </div>
-                  </div>
-            </div>
+          </div>
         </div>
-        </div>
+      </div>
     </div>
 
-
-
-    <div class="modal fade p-0" id="modal-no-user" tabindex="-1" aria-labelledby="modal-no-user" style="display: none;" aria-hidden="true">
-        <div class="modal-dialog">
+    <div
+      class="modal fade p-0"
+      id="modal-no-user"
+      tabindex="-1"
+      aria-labelledby="modal-no-user"
+      style="display: none"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog">
         <div class="modal-content">
-            <div class="modal-header">
-                <div class="modal-body px-2 py-3 p-md-4">
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close" style="position: absolute;right: 20px;top:20px;z-index:9999;zoom:.9;"></button>
-                    
-                    <!--detalhes-->
-                    <div class="white-box" style="max-width: 440px;">
-                    
-                    <h4 class="box-title">Não encontramos dividas</h4>
-                    <p class="text-muted">Não existem propostas de renegociação ou dívidas atreladas ao seu nome.</p>
-                        <div style="text-align: center;">
-                        <img src="https://raw.githubusercontent.com/Rustcodeweb/Notification-Card-Design/main/01.jpg" style="width: 300px;margin: 0 auto;">
-                            <a href="./index.html" class="btn btn-cs-outline mt-2 mb-5" style="padding:0.6rem 1.2rem 0.7rem;margin: 0 auto;border: 1px solid #000;">Voltar ao início</a>
-                        </div>
-                    
-                    </div>
+          <div class="modal-header">
+            <div class="modal-body px-2 py-3 p-md-4">
+              <button
+                type="button"
+                class="btn-close"
+                data-bs-dismiss="modal"
+                aria-label="Close"
+                style="
+                  position: absolute;
+                  right: 20px;
+                  top: 20px;
+                  z-index: 9999;
+                  zoom: 0.9;
+                "
+              ></button>
 
+              <!--detalhes-->
+              <div class="white-box" style="max-width: 440px">
+                <h4 class="box-title">Não encontramos dividas</h4>
+                <p class="text-muted">
+                  Não existem propostas de renegociação ou dívidas atreladas ao
+                  seu nome.
+                </p>
+                <div style="text-align: center">
+                  <img
+                    src="https://raw.githubusercontent.com/Rustcodeweb/Notification-Card-Design/main/01.jpg"
+                    style="width: 300px; margin: 0 auto"
+                  />
+                  <a
+                    href="./index.html"
+                    class="btn btn-cs-outline mt-2 mb-5"
+                    style="
+                      padding: 0.6rem 1.2rem 0.7rem;
+                      margin: 0 auto;
+                      border: 1px solid #000;
+                    "
+                    >Voltar ao início</a
+                  >
                 </div>
+              </div>
+            </div>
+          </div>
         </div>
-        </div>
-        </div>
+      </div>
     </div>
-
-
-
-
-
-
-
-    
-
-</body>
+  </body>
 </html>
